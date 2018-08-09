@@ -45,11 +45,11 @@ public class VirtualFileSystemFactory implements FileSystemFactory {
     }
 
     public VirtualFileSystemFactory(Path defaultHomeDir) {
-        this.defaultHomeDir = defaultHomeDir;
+        this.defaultHomeDir = defaultHomeDir.toAbsolutePath();
     }
 
     public void setDefaultHomeDir(Path defaultHomeDir) {
-        this.defaultHomeDir = defaultHomeDir;
+        this.defaultHomeDir = defaultHomeDir.toAbsolutePath();
     }
 
     public Path getDefaultHomeDir() {
